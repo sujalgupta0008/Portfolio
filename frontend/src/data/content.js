@@ -49,7 +49,7 @@ export const EDUCATION = [
     program: "Bachelor of Technology",
     period: "Aug 2024 — Aug 2027",
     detail: "Core engineering foundation with a focus on data structures, databases and statistics.",
-    highlight: "CGPA 7.7/10",
+    highlight: "CGPA 8.8/10",
   },
 ];
 
@@ -218,7 +218,7 @@ export const CERTIFICATIONS = [
 ];
 
 export const ACHIEVEMENTS = [
-  { value: "7.7", suffix: "/10", label: "CGPA at graduation", year: "2025" },
+  { value: "8.8", suffix: "/10", label: "CGPA at graduation", year: "2025" },
   { value: "7", suffix: "+", label: "End-to-end analytics projects shipped", year: "2023–25" },
   { value: "6.36", suffix: "M+", label: "Records processed across ML pipelines", year: "2024" },
   { value: "122", suffix: "K+", label: "Job listings mined for LinkaLyze", year: "2024" },
