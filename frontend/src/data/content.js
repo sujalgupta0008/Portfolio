@@ -1,7 +1,7 @@
 export const SOCIALS = {
   github: "https://github.com/sujalgupta0008",
   linkedin: "https://www.linkedin.com/in/sujal90585",
-  email: "sujalgupta0008@gmail.com",
+  email: "mailto:sujalgupta0008@gmail.com",
 };
 
 export const NAV_LINKS = [
