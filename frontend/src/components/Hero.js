@@ -6,7 +6,7 @@ import { ParticlesField } from "./ParticlesField";
 import { useCountUp } from "../hooks/useCountUp";
 import { resumeDownloadUrl } from "../lib/api";
 
-const HERO_IMAGE = "https://images.pexels.com/photos/33761233/pexels-photo-33761233.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=700";
+const HERO_IMAGE = "https://images.pexels.com/photos/33605541/pexels-photo-33605541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=700";
 
 const nameLine = (text, delay) => (
   <span className="block overflow-hidden">
