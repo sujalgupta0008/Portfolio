@@ -156,21 +156,6 @@ export const Hero = () => {
 
         <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="absolute -top-4 -left-2 md:-left-16 z-20 hidden sm:flex items-start gap-2"
-            data-testid="hero-role-annotation"
-          >
-            <ArrowDownRight className="text-accentsky mt-2 flex-shrink-0" size={20} />
-            <div className="glass rounded-xl px-4 py-3 font-mono-stat text-xs text-white/70 space-y-1">
-              <p>1. Data Analyst</p>
-              <p>2. Power BI Developer</p>
-              <p>3. Business Analyst</p>
-            </div>
-          </motion.div>
-
-          <motion.div
             style={{ x: springX, y: springY }}
             className="relative w-[280px] md:w-[360px] aspect-[3/4]"
           >
@@ -188,6 +173,29 @@ export const Hero = () => {
               <img src={HERO_IMAGE} alt="Sujal Gupta" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
               <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]" />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                top: ["-8%", "-8%", "82%", "82%", "-8%"],
+                left: ["-14%", "76%", "76%", "-14%", "-14%"],
+              }}
+              transition={{
+                opacity: { duration: 0.6, delay: 1.1 },
+                top: { duration: 16, repeat: Infinity, ease: "linear", delay: 1.1 },
+                left: { duration: 16, repeat: Infinity, ease: "linear", delay: 1.1 },
+              }}
+              className="absolute z-20 hidden sm:flex items-start gap-2"
+              data-testid="hero-role-annotation"
+            >
+              <ArrowDownRight className="text-accentsky mt-2 flex-shrink-0" size={20} />
+              <div className="glass rounded-xl px-4 py-3 font-mono-stat text-xs text-white/70 space-y-1 whitespace-nowrap">
+                <p>1. Data Analyst</p>
+                <p>2. Power BI Developer</p>
+                <p>3. Business Analyst</p>
+              </div>
             </motion.div>
           </motion.div>
         </div>
