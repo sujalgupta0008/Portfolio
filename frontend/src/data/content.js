@@ -129,7 +129,7 @@ export const PROJECTS = [
     result: "Delivered an executive-ready dashboard surfacing regional revenue trends, product profitability and seasonal demand patterns.",
     github: "https://github.com/sujalgupta0008/sales-analytics-dashboard-power-bi",
     live: "https://github.com/sujalgupta0008/sales-analytics-dashboard-power-bi",
-    image: "https://images.unsplash.com/photo-1720962158813-29b66b8e23e1?crop=entropy&cs=srgb&fm=jpg&q=85",
+    image: "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/z4x4ocnq_executive-dashboard.png",
   },
   {
     id: "linkalyze",
