@@ -23,7 +23,7 @@ flow.append(Paragraph("Data Analyst · BI Developer · AI Enthusiast", role_styl
 flow.append(Paragraph("sujalgupta0008@gmail.com &nbsp;|&nbsp; github.com/sujalgupta0008 &nbsp;|&nbsp; linkedin.com/in/sujalgupta0008", body))
 
 flow.append(Paragraph("Education", h2))
-flow.append(Paragraph("<b>Dr. A.P.J. Abdul Kalam Technical University (AKTU)</b> — B.Tech, CGPA 8.8/10 (2021–2025)", body))
+flow.append(Paragraph("<b>Dr. A.P.J. Abdul Kalam Technical University (AKTU)</b> — B.Tech, CGPA 7.7/10 (Aug 2024 – Aug 2027)", body))
 flow.append(Paragraph("<b>Indian Institute of Technology, Patna</b> — Advanced Certification in Data Science & AI (2024)", body))
 
 flow.append(Paragraph("Experience", h2))
