@@ -7,12 +7,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['"Space Grotesk"', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
       colors: {
+        ink: '#050505',
+        accentblue: '#3B82F6',
+        accentcyan: '#06B6D4',
+        accentsky: '#38BDF8',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
