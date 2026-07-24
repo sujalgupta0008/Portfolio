@@ -174,7 +174,7 @@ export const PROJECTS = [
     result: "Highlighted high-risk claim segments and turnaround-time bottlenecks for faster settlements.",
     github: "https://github.com/sujalgupta0008/insurance-claims-analytics-dashboard",
     live: "https://github.com/sujalgupta0008/insurance-claims-analytics-dashboard",
-    image: "https://images.unsplash.com/photo-1720962158883-b0f2021fb51e?crop=entropy&cs=srgb&fm=jpg&q=85",
+    image: "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/k1xne5we_dashboard_overview.png",
   },
   {
     id: "smartlend",
