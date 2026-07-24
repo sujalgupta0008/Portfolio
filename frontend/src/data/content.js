@@ -159,7 +159,7 @@ export const PROJECTS = [
     result: "Built a high-recall fraud classifier validated across 6.36M+ transaction records.",
     github: "https://github.com/sujalgupta0008/fraud-detection-using-machine-learning",
     live: "https://github.com/sujalgupta0008/fraud-detection-using-machine-learning",
-    image: "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&q=85",
+    image: "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/cyfswvb4_fraud_detection_dashboard.png",
   },
   {
     id: "insurance-claims",
