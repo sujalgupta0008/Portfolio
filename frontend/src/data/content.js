@@ -41,6 +41,7 @@ export const EDUCATION = [
     program: "Advanced Certification — Data Science & Artificial Intelligence",
     period: "Aug 2024 — Aug 2027",
     detail: "Applied coursework in statistical modeling, machine learning and AI systems, delivered by IIT Patna faculty.",
+    highlight: "CGPA 8.8/10",
   },
   {
     id: "aktu",
