@@ -20,7 +20,7 @@ export const HERO_STATS = [
   { value: 7, suffix: "+", label: "Projects Shipped" },
   { value: 6.36, suffix: "M+", label: "Records Analyzed", decimals: 2 },
   { value: 122, suffix: "K+", label: "Job Listings Mined" },
-  { value: 7.7, suffix: "", label: "CGPA", decimals: 1 },
+  { value: 8.8, suffix: "", label: "CGPA", decimals: 1 },
   { value: 3, suffix: "+", label: "Corporate Simulations" },
 ];
 
