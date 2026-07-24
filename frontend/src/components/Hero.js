@@ -1,18 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
-import { ArrowDown, ArrowLeft, Download, Mail, Github, Linkedin } from "lucide-react";
+import { ArrowDown, Download, Mail, Github, Linkedin } from "lucide-react";
 import { ROLES, HERO_STATS, SOCIALS } from "../data/content";
 import { ParticlesField } from "./ParticlesField";
 import { useCountUp } from "../hooks/useCountUp";
 import { resumeDownloadUrl } from "../lib/api";
 
 const HERO_IMAGE = "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/ubqs9490_1.png";
-
-const ORBIT_BADGES = [
-  { id: "data-analyst", label: "Data Analyst", angle: 0, duration: 24 },
-  { id: "power-bi-developer", label: "Power BI Developer", angle: 120, duration: 28 },
-  { id: "business-analyst", label: "Business Analyst", angle: 240, duration: 32 },
-];
 
 const nameLine = (text, delay) => (
   <span className="block overflow-hidden">
@@ -163,7 +157,7 @@ export const Hero = () => {
         <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
           <motion.div
             style={{ x: springX, y: springY }}
-            className="hero-photo-frame relative w-[280px] md:w-[360px] aspect-[3/4]"
+            className="relative w-[280px] md:w-[360px] aspect-[3/4]"
           >
             <div className="absolute -inset-10 bg-accentblue/25 blur-[90px] rounded-full" />
             <div className="absolute inset-0">
@@ -180,50 +174,7 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
               <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]" />
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
-              className="orbit-hero absolute inset-0 hidden md:block"
-              data-testid="hero-orbit-system"
-            >
-              {ORBIT_BADGES.map((badge) => (
-                <div
-                  key={badge.id}
-                  className="orbit-arm absolute inset-0"
-                  style={{ "--start": `${badge.angle}deg`, animationDuration: `${badge.duration}s` }}
-                >
-                  <div className="orbit-radius absolute top-1/2 left-1/2 flex items-center gap-1.5">
-                    <ArrowLeft size={13} className="orbit-arrow-icon text-accentsky flex-shrink-0" />
-                    <div
-                      className="orbit-counter"
-                      style={{ "--start": `${badge.angle}deg`, animationDuration: `${badge.duration}s` }}
-                    >
-                      <span
-                        className="orbit-float glass rounded-full px-3 py-1.5 text-[11px] font-mono-stat text-white/85 whitespace-nowrap block"
-                        data-testid={`orbit-badge-${badge.id}`}
-                      >
-                        {badge.label}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
           </motion.div>
-
-          <div className="flex md:hidden flex-wrap gap-2 mt-6 justify-center" data-testid="hero-orbit-mobile-stack">
-            {ORBIT_BADGES.map((badge) => (
-              <span
-                key={badge.id}
-                data-testid={`orbit-badge-mobile-${badge.id}`}
-                className="glass rounded-full px-3 py-1.5 text-[11px] font-mono-stat text-white/80 flex items-center gap-1.5"
-              >
-                <ArrowLeft size={12} className="text-accentsky" /> {badge.label}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
 
