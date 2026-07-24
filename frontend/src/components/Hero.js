@@ -4,7 +4,7 @@ import { ArrowDown, Download, Mail, Github, Linkedin } from "lucide-react";
 import { ROLES, HERO_STATS, SOCIALS } from "../data/content";
 import { ParticlesField } from "./ParticlesField";
 import { useCountUp } from "../hooks/useCountUp";
-import { resumeDownloadUrl } from "../lib/api";
+;
 
 const HERO_IMAGE = "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/ubqs9490_1.png";
 
@@ -122,7 +122,8 @@ export const Hero = () => {
             className="mt-9 flex flex-wrap items-center gap-4"
           >
             <a
-              href={resumeDownloadUrl}
+              href="/Sujal_Gupta_Resume.pdf"
+              download
               data-testid="hero-resume-download-btn"
               className="group inline-flex items-center gap-2 rounded-full bg-accentblue px-6 py-3 text-sm font-medium text-white hover:bg-accentblue/90 transition-colors"
             >
