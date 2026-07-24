@@ -39,7 +39,7 @@ export const EDUCATION = [
     id: "iit-patna",
     institution: "Indian Institute of Technology, Patna",
     program: "Advanced Certification — Data Science & Artificial Intelligence",
-    period: "2024",
+    period: "Aug 2024 — Aug 2027",
     detail: "Applied coursework in statistical modeling, machine learning and AI systems, delivered by IIT Patna faculty.",
   },
   {
