@@ -58,7 +58,7 @@ export const EXPERIENCE = [
     id: "tata-genai",
     company: "Tata GenAI",
     role: "GenAI Powered Data Analytics — Job Simulation",
-    period: "2025",
+    period: "2024 — Jul 2026",
     featured: true,
     points: [
       "Simulated a real Tata GenAI analytics workflow — from business brief to a GenAI-assisted insight deliverable.",
@@ -70,7 +70,7 @@ export const EXPERIENCE = [
     id: "jpmorgan",
     company: "JPMorgan Chase & Co.",
     role: "Data Analytics — Virtual Job Simulation",
-    period: "2024",
+    period: "2024 — Feb 2026",
     featured: true,
     points: [
       "Worked through a simulated investment-banking analytics case, cleaning and modeling structured financial data.",
@@ -82,7 +82,7 @@ export const EXPERIENCE = [
     id: "deloitte",
     company: "Deloitte",
     role: "Data Analytics — Job Simulation",
-    period: "2024",
+    period: "2024 — Jan 2026",
     featured: true,
     points: [
       "Completed a consulting-style analytics simulation — from data cleaning to an executive-ready insight deck.",
