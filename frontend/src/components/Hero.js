@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
-import { ArrowDown, Download, Mail, Github, Linkedin } from "lucide-react";
+import { ArrowDown, ArrowDownRight, Download, Mail, Github, Linkedin } from "lucide-react";
 import { ROLES, HERO_STATS, SOCIALS } from "../data/content";
 import { ParticlesField } from "./ParticlesField";
 import { useCountUp } from "../hooks/useCountUp";
@@ -155,6 +155,21 @@ export const Hero = () => {
         </div>
 
         <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="absolute -top-4 -left-2 md:-left-16 z-20 hidden sm:flex items-start gap-2"
+            data-testid="hero-role-annotation"
+          >
+            <ArrowDownRight className="text-accentsky mt-2 flex-shrink-0" size={20} />
+            <div className="glass rounded-xl px-4 py-3 font-mono-stat text-xs text-white/70 space-y-1">
+              <p>1. Data Analyst</p>
+              <p>2. Power BI Developer</p>
+              <p>3. Business Analyst</p>
+            </div>
+          </motion.div>
+
           <motion.div
             style={{ x: springX, y: springY }}
             className="relative w-[280px] md:w-[360px] aspect-[3/4]"
