@@ -144,7 +144,7 @@ export const PROJECTS = [
     result: "Mapped the most in-demand skills and role clusters across 122,000+ live job listings.",
     github: "https://github.com/sujalgupta0008/linkalyze-linkedin-job-market-analytics",
     live: "https://github.com/sujalgupta0008/linkalyze-linkedin-job-market-analytics",
-    image: "https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg?auto=compress&cs=tinysrgb&h=650",
+    image: "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/fzhaqhof_LINKALYZE_dashboard.png",
   },
   {
     id: "fraud-detection",
