@@ -48,7 +48,7 @@ export const EDUCATION = [
     program: "Bachelor of Technology",
     period: "Aug 2024 — Aug 2027",
     detail: "Core engineering foundation with a focus on data structures, databases and statistics.",
-    highlight: "CGPA 8.8 / 10",
+    highlight: "CGPA 8.8/10",
   },
 ];
 
