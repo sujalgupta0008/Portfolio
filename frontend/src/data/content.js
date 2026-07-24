@@ -46,7 +46,7 @@ export const EDUCATION = [
     id: "aktu",
     institution: "Dr. A.P.J. Abdul Kalam Technical University (AKTU)",
     program: "Bachelor of Technology",
-    period: "2021 — 2025",
+    period: "Aug 2024 — Aug 2027",
     detail: "Core engineering foundation with a focus on data structures, databases and statistics.",
     highlight: "CGPA 8.8 / 10",
   },
