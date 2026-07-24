@@ -189,7 +189,7 @@ export const PROJECTS = [
     result: "Segmented the loan portfolio by default risk to support smarter lending decisions.",
     github: "https://github.com/sujalgupta0008/smartlend-loan-analytics-dashboard",
     live: "https://github.com/sujalgupta0008/smartlend-loan-analytics-dashboard",
-    image: "https://images.pexels.com/photos/14314638/pexels-photo-14314638.jpeg?auto=compress&cs=tinysrgb&h=650",
+    image: "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/b1aiexh3_SMARTLEND_Dashboard.png",
   },
   {
     id: "ai-career-navigator",
