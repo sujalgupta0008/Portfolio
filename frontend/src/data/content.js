@@ -14,43 +14,52 @@ export const NAV_LINKS = [
   { id: "contact", label: "Contact" },
 ];
 
-export const ROLES = ["Data Analyst", "BI Developer", "AI Enthusiast", "Insight Storyteller"];
+export const ROLES = [
+  "Data Analyst",
+  "Power BI Developer",
+  "Machine Learning Enthusiast",
+  "GenAI Explorer"
+];
 
 export const HERO_STATS = [
-  { value: 7, suffix: "+", label: "Projects Shipped" },
-  { value: 6.36, suffix: "M+", label: "Records Analyzed", decimals: 2 },
-  { value: 122, suffix: "K+", label: "Job Listings Mined" },
-  { value: 8.8, suffix: "", label: "CGPA", decimals: 1 },
-  { value: 3, suffix: "+", label: "Corporate Simulations" },
+  { value: 7, suffix: "+", label: "Data Projects" },
+  { value: 6.36, suffix: "M+", label: "Rows Processed", decimals: 2 },
+  { value: 122, suffix: "K+", label: "LinkedIn Jobs Analyzed" },
+  { value: 8.8, suffix: "/10", label: "IIT Patna CGPA", decimals: 1 },
+  { value: 3, suffix: "", label: "Forage Simulations" },
 ];
 
 export const ABOUT = {
   kicker: "01 — About",
-  quote: "Numbers only matter the moment they change a decision.",
+  quote: "Data is valuable only when it drives better decisions.",
   paragraphs: [
-    "I'm Sujal Gupta — a data analyst who treats spreadsheets like stories waiting to be told. Somewhere between a SQL query and a Power BI canvas, I found the thing I actually enjoy: turning noisy, chaotic data into something a business can act on before lunch.",
-    "My work spans fraud models trained on millions of transactions, dashboards built for real executives, and a scraped LinkedIn dataset of 122,000+ job listings that taught me more about the job market than any course could. Along the way, Deloitte, JPMorgan Chase and Tata GenAI trusted me with real-world simulations — and I trusted them to keep pushing my standards higher.",
-    "I'm not chasing a title. I'm chasing the moment a chart makes someone say — 'okay, now I understand what to do.'",
+    [
+  "I'm Sujal Gupta, a Data Analytics student at IIT Patna who enjoys finding patterns hidden inside data. Whether it's writing SQL queries, building Power BI dashboards, or developing machine learning models, I love turning complex datasets into clear, actionable insights.",
+  "From analyzing over 6 million financial transactions for fraud detection to exploring 122,000+ LinkedIn job postings through LinkaLyze, every project has helped me strengthen my analytical thinking and business problem-solving skills.",
+  "I'm building my career one project at a time—continuously learning, experimenting with AI and analytics, and creating solutions that help businesses make smarter, data-driven decisions.",
+]
   ],
 };
 
 export const EDUCATION = [
+ {
+  id: "iit-patna",
+  institution: "Indian Institute of Technology Patna",
+  program: "B.Sc. (Hons.) in Computer Science and Data Analytics",
+  period: "Aug 2024 – Aug 2027",
+  detail:
+    "Pursuing an interdisciplinary curriculum covering Data Analytics, Machine Learning, Artificial Intelligence, Statistics, Database Systems, and Data Visualization with hands-on analytical projects.",
+  highlight: "CGPA: 8.8/10",
+},
   {
-    id: "iit-patna",
-    institution: "Indian Institute of Technology, Patna",
-    program: "Advanced Certification — Data Science & Artificial Intelligence",
-    period: "Aug 2024 — Aug 2027",
-    detail: "Applied coursework in statistical modeling, machine learning and AI systems, delivered by IIT Patna faculty.",
-    highlight: "CGPA 8.8/10",
-  },
-  {
-    id: "aktu",
-    institution: "Dr. A.P.J. Abdul Kalam Technical University (AKTU)",
-    program: "Bachelor of Technology",
-    period: "Sep 2024 — Sep 2028",
-    detail: "Core engineering foundation with a focus on data structures, databases and statistics.",
-    highlight: "CGPA 7.7/10",
-  },
+  id: "aktu",
+  institution: "Dr. A.P.J. Abdul Kalam Technical University (AKTU)",
+  program: "Bachelor of Technology (B.Tech) in Computer Science and Engineering",
+  period: "Sep 2024 – Sep 2028",
+  detail:
+    "Studying core Computer Science subjects including Data Structures & Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, Computer Networks, and Software Engineering.",
+  highlight: "CGPA: 7.7/10",
+},
 ];
 
 export const EXPERIENCE = [
