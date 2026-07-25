@@ -95,23 +95,58 @@ export const EXPERIENCE = [
 export const SKILLS = [
   {
     category: "Data Analysis & BI",
-    items: ["Power BI", "Tableau", "Excel (Advanced)", "DAX", "Looker Studio"],
+    items: [
+      "Power BI",
+      "Microsoft Excel (Advanced)",
+      "DAX",
+      "Power Query",
+      "Data Visualization",
+      "Dashboard Development"
+    ],
   },
   {
-    category: "Programming",
-    items: ["Python", "SQL", "R", "Pandas", "NumPy"],
+    category: "Programming & Databases",
+    items: [
+      "Python",
+      "SQL (MySQL)",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn"
+    ],
   },
   {
     category: "Machine Learning & AI",
-    items: ["Scikit-learn", "XGBoost", "GenAI / LLMs", "Prompt Engineering", "NLP"],
+    items: [
+      "Scikit-learn",
+      "Machine Learning",
+      "Classification",
+      "Regression",
+      "GenAI",
+      "Prompt Engineering"
+    ],
   },
   {
-    category: "Statistics",
-    items: ["Hypothesis Testing", "Regression", "A/B Testing", "Forecasting"],
+    category: "Analytics & Statistics",
+    items: [
+      "Exploratory Data Analysis (EDA)",
+      "Data Cleaning",
+      "Feature Engineering",
+      "Hypothesis Testing",
+      "Statistical Analysis",
+      "Business Insights"
+    ],
   },
   {
     category: "Tools & Platforms",
-    items: ["Git / GitHub", "Jupyter", "Azure", "AWS", "VS Code"],
+    items: [
+      "Git",
+      "GitHub",
+      "Jupyter Notebook",
+      "VS Code",
+      "Google Colab",
+      "Azure SQL Database"
+    ],
   },
 ];
 
@@ -209,12 +244,11 @@ export const PROJECTS = [
 ];
 
 export const CERTIFICATIONS = [
-  { title: "Google Data Analytics Professional Certificate", issuer: "Google · Coursera", year: "2024" },
-  { title: "Microsoft Power BI Data Analyst (PL-300)", issuer: "Microsoft", year: "2024" },
-  { title: "SQL for Data Science", issuer: "UC Davis · Coursera", year: "2023" },
-  { title: "Deloitte Data Analytics Job Simulation", issuer: "Forage", year: "2024" },
-  { title: "JPMorgan Chase Data Analytics Simulation", issuer: "Forage", year: "2024" },
-  { title: "Tata GenAI Powered Data Analytics", issuer: "Forage", year: "2025" },
+  { title: "Tata GenAI Powered Data Analytics", issuer: "Forage", year: "July 2026" },
+  { title: "JPMorgan Chase Data Analytics Simulation", issuer: "Forage", year: "Feb 2026" },
+  { title: "Deloitte Data Analytics Job Simulation", issuer: "Forage", year: "Jan 2026" },
+  { title: "Data Analyst Bootcamp", issuer: "Udemy", year: "Sep 2025" },
+  { title: "Python Programming", issuer: "Udemy", year: "April 2025" }
 ];
 
 export const ACHIEVEMENTS = [
