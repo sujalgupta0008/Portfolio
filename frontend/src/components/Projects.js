@@ -155,29 +155,61 @@ const ProjectSlide = ({ project, index }) => {
             ))}
           </div>
 
-          {/* RESULT */}
+         {/* RESULT */}
 
-          <div
-            className="
-              mt-8
-              rounded-2xl
-              border
-              border-cyan-400/15
-              bg-gradient-to-br
-              from-white/[0.05]
-              to-white/[0.02]
-              backdrop-blur-xl
-              p-6
-            "
-          >
-            <p className="uppercase tracking-[0.25em] text-xs text-cyan-300 mb-3">
-              Result
-            </p>
+<div className="mt-8 relative group">
 
-            <p className="text-white/80 leading-8">
-              {project.result}
-            </p>
-          </div>
+  {/* Glow */}
+  <div
+    className="
+      absolute
+      -inset-2
+      rounded-3xl
+      bg-gradient-to-r
+      from-cyan-500/25
+      via-emerald-400/20
+      to-green-500/25
+      blur-2xl
+      opacity-40
+      transition-all
+      duration-700
+      group-hover:opacity-100
+      group-hover:blur-3xl
+    "
+  />
+
+  <div
+    className="
+      relative
+      rounded-2xl
+      border
+      border-cyan-400/15
+      bg-gradient-to-br
+      from-white/[0.05]
+      to-white/[0.02]
+      backdrop-blur-xl
+      p-6
+      transition-all
+      duration-500
+      group-hover:border-cyan-400/60
+    "
+  >
+    <p className="uppercase tracking-[0.25em] text-xs text-cyan-300 mb-3">
+      Result
+    </p>
+
+    <p className="text-white/80 leading-8">
+      {project.result}
+    </p>
+
+    {/* Inner Border */}
+    <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-cyan-300/20 group-hover:ring-cyan-300/60 transition duration-500" />
+
+    {/* Bottom Glow */}
+    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-3/4 h-20 bg-cyan-400/30 blur-[70px] opacity-0 group-hover:opacity-100 transition duration-700" />
+  </div>
+
+</div>
 
           {/* BUTTONS */}
 
