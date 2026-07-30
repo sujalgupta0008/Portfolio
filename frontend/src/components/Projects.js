@@ -254,6 +254,9 @@ const ProjectSlide = ({ project, index }) => {
 
       </div>
     </div>
+  );
+};
+
 export const Projects = () => (
   <section
     id="projects"
@@ -432,4 +435,3 @@ export const Projects = () => (
   </section>
 );
 
-export default Projects;
