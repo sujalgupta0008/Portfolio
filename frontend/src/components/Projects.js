@@ -18,9 +18,34 @@ const ProjectSlide = ({ project, index }) => {
           transition={{ duration: 0.7 }}
           className={`relative lg:col-span-7 aspect-[16/10] rounded-2xl overflow-hidden ${reversed ? "lg:order-2" : ""}`}
         >
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
+           w-full
+    h-full
+    object-cover
+    transition-all
+    duration-700
+    brightness-110
+    contrast-110
+    saturate-125
+    hover:brightness-125
+    hover:contrast-125
+    hover:saturate-150
+    hover:scale-[1.03]
+  "
+/>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
+          <div
+  className="
+    absolute
+    inset-0
+    rounded-2xl
+    ring-1
+    ring-cyan-400/40
+    shadow-[0_0_25px_rgba(34,211,238,0.25)]
+    transition-all
+    duration-500
+    group-hover:shadow-[0_0_45px_rgba(34,211,238,0.55)]
+  "
+/>
           <span className="absolute top-5 left-5 font-mono-stat text-5xl text-white/20">{project.index}</span>
         </motion.div>
 
