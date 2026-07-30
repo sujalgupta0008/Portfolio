@@ -164,20 +164,35 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    id: "sales-analytics",
-    index: "01",
-    title: "Sales Analytics Dashboard",
-    subtitle: "Power BI · Retail Performance Intelligence",
-    business:
-      "A retail business needed clear visibility into regional sales performance and product-level profitability to guide quarterly planning.",
-    stack: ["Power BI", "DAX", "SQL", "Excel"],
-    approach:
-      "Modeled a star-schema data warehouse, authored 30+ DAX measures, and designed an executive dashboard with drill-through paths from region to SKU.",
-    result: "Delivered an executive-ready dashboard surfacing regional revenue trends, product profitability and seasonal demand patterns.",
-    github: "https://github.com/sujalgupta0008/sales-analytics-dashboard-power-bi",
-    live: "https://github.com/sujalgupta0008/sales-analytics-dashboard-power-bi",
-    image: "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/z4x4ocnq_executive-dashboard.png",
-  },
+  id: "flight-price-prediction",
+  index: "01",
+  title: "Flight Price Prediction System",
+  subtitle: "Machine Learning · Travel Price Intelligence",
+  business:
+    "Airfare prices fluctuate significantly based on airline, route, duration, and booking timing, making it difficult for travelers to estimate fair ticket prices and plan cost-effective trips.",
+
+  stack: [
+    "Python",
+    "Scikit-Learn",
+    "Pandas",
+    "SQL",
+    "Power BI",
+    "Flask",
+    "Streamlit"
+  ],
+
+  approach:
+    "Built an end-to-end machine learning pipeline by performing data cleaning, feature engineering, and exploratory data analysis on flight booking data. Trained and evaluated multiple regression models, selecting Random Forest as the best-performing model (R² = 0.8284). Developed an interactive Power BI dashboard for price trend analysis and deployed the prediction system as a web application using Flask/Streamlit.",
+
+  result:
+    "Delivered a production-ready flight fare prediction platform capable of generating accurate ticket price estimates while providing interactive analytics on airline performance, route demand, pricing trends, and booking insights for informed travel decisions.",
+
+  github: "https://github.com/sujalgupta0008/Flight-Price-Prediction-System.git",
+
+  live: "https://flight-price-prediction-system-4gyfm4yrt-sujal0008.vercel.app/",
+
+  image: "/Flight_website_overview.png",
+},
   {
     id: "sales-analytics",
     index: "02",
