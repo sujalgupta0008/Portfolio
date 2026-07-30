@@ -4,9 +4,12 @@ import { ArrowDown, Download, Mail, Github, Linkedin } from "lucide-react";
 import { ROLES, HERO_STATS, SOCIALS } from "../data/content";
 import { ParticlesField } from "./ParticlesField";
 import { useCountUp } from "../hooks/useCountUp";
-;
 
 const HERO_IMAGE = "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/ubqs9490_1.png";
+
+// Subtle film-grain texture, pure CSS/SVG — no image request needed.
+const NOISE_BG =
+  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
 
 const nameLine = (text, delay) => (
   <span className="block overflow-hidden">
@@ -29,7 +32,7 @@ const StatCard = ({ stat, className, delay }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
-      className={`glass glass-hover rounded-2xl px-4 py-3 transition-colors duration-300 ${className}`}
+      className={`glass glass-hover rounded-2xl px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_-10px_rgba(56,189,248,0.35)] ${className}`}
       data-testid={`hero-stat-${stat.label.replace(/\s/g, "-").toLowerCase()}`}
     >
       <div className="font-mono-stat text-xl md:text-2xl text-accentsky">
@@ -43,10 +46,18 @@ const StatCard = ({ stat, className, delay }) => {
 export const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const containerRef = useRef(null);
+
+  // Parallax translate for the whole visual block (glow + particles + portrait).
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
   const springX = useSpring(mx, { damping: 20, stiffness: 80 });
   const springY = useSpring(my, { damping: 20, stiffness: 80 });
+
+  // Independent 3D tilt for just the portrait card — different depth than the parallax above.
+  const rotX = useMotionValue(0);
+  const rotY = useMotionValue(0);
+  const springRotX = useSpring(rotX, { damping: 25, stiffness: 120 });
+  const springRotY = useSpring(rotY, { damping: 25, stiffness: 120 });
 
   useEffect(() => {
     const id = setInterval(() => setRoleIndex((i) => (i + 1) % ROLES.length), 2400);
@@ -60,6 +71,13 @@ export const Hero = () => {
     const py = (e.clientY - rect.top) / rect.height - 0.5;
     mx.set(px * 24);
     my.set(py * 24);
+    rotY.set(px * 10);
+    rotX.set(py * -10);
+  };
+
+  const handleMouseLeave = () => {
+    rotX.set(0);
+    rotY.set(0);
   };
 
   return (
@@ -67,22 +85,39 @@ export const Hero = () => {
       id="hero"
       ref={containerRef}
       onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
       className="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden"
       data-testid="hero-section"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(59,130,246,0.14),_transparent_55%)] pointer-events-none" />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.035] mix-blend-overlay"
+        style={{ backgroundImage: NOISE_BG }}
+      />
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full grid lg:grid-cols-12 gap-10 items-center relative z-10">
         <div className="lg:col-span-7">
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="font-mono-stat text-xs text-accentcyan tracking-widest uppercase mb-4"
-            data-testid="hero-kicker"
+            className="flex items-center gap-3 mb-4"
           >
-            Data Analyst · BI · AI Enthusiast
-          </motion.p>
+            <p
+              className="font-mono-stat text-xs text-accentcyan tracking-widest uppercase"
+              data-testid="hero-kicker"
+            >
+              Data Analyst · BI · AI Enthusiast
+            </p>
+            <span className="h-px w-8 bg-white/20" />
+            <span className="inline-flex items-center gap-1.5 text-[11px] text-white/50">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
+              </span>
+              Open to work
+            </span>
+          </motion.div>
 
           <h1 className="font-heading font-medium text-5xl md:text-7xl lg:text-[5.6vw] leading-[0.95] tracking-tighter text-white">
             {nameLine("Sujal", 0.3)}
@@ -125,24 +160,38 @@ export const Hero = () => {
               href="/Sujal_Gupta_Resume.pdf"
               download
               data-testid="hero-resume-download-btn"
-              className="group inline-flex items-center gap-2 rounded-full bg-accentblue px-6 py-3 text-sm font-medium text-white hover:bg-accentblue/90 transition-colors"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-accentblue px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accentblue/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accentsky focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
-              <Download size={16} className="transition-transform group-hover:-translate-y-0.5" />
-              Download Resume
+              <span className="absolute inset-0 -translate-x-full skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
+              <Download size={16} className="relative z-10 transition-transform group-hover:-translate-y-0.5" />
+              <span className="relative z-10">Download Resume</span>
             </a>
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               data-testid="hero-contact-cta-btn"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white hover:border-accentsky/60 hover:text-accentsky transition-colors"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-accentsky/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accentsky focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
-              <Mail size={16} />
-              Let's Talk
+              <span className="absolute inset-0 origin-left scale-x-0 bg-accentsky/10 transition-transform duration-500 ease-out group-hover:scale-x-100" />
+              <Mail size={16} className="relative z-10 transition-colors group-hover:text-accentsky" />
+              <span className="relative z-10 transition-colors group-hover:text-accentsky">Let's Talk</span>
             </button>
             <div className="flex items-center gap-3 ml-1">
-              <a href={SOCIALS.github} target="_blank" rel="noreferrer" data-testid="hero-github-icon" className="text-white/50 hover:text-accentsky transition-colors">
+              <a
+                href={SOCIALS.github}
+                target="_blank"
+                rel="noreferrer"
+                data-testid="hero-github-icon"
+                className="text-white/50 hover:text-accentsky transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accentsky rounded-full"
+              >
                 <Github size={19} />
               </a>
-              <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer" data-testid="hero-linkedin-icon" className="text-white/50 hover:text-accentsky transition-colors">
+              <a
+                href={SOCIALS.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                data-testid="hero-linkedin-icon"
+                className="text-white/50 hover:text-accentsky transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accentsky rounded-full"
+              >
                 <Linkedin size={19} />
               </a>
             </div>
@@ -164,16 +213,31 @@ export const Hero = () => {
             <div className="absolute inset-0">
               <ParticlesField />
             </div>
+
+            {/* Idle float wrapper */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="relative w-full h-full rounded-[2rem] overflow-hidden glass"
-              data-testid="hero-portrait-frame"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="relative w-full h-full"
+              style={{ perspective: 800 }}
             >
-              <img src={HERO_IMAGE} alt="Sujal Gupta" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
-              <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]" />
+              {/* 3D tilt wrapper — independent from the outer parallax translate */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                style={{
+                  rotateX: springRotX,
+                  rotateY: springRotY,
+                  transformStyle: "preserve-3d",
+                }}
+                className="relative w-full h-full rounded-[2rem] overflow-hidden glass"
+                data-testid="hero-portrait-frame"
+              >
+                <img src={HERO_IMAGE} alt="Sujal Gupta" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]" />
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
