@@ -22,11 +22,14 @@ export const ROLES = [
 ];
 
 export const HERO_STATS = [
-  { value: 7, suffix: "+", label: "Data Projects" },
-  { value: 6.36, suffix: "M+", label: "Rows Processed", decimals: 2 },
-  { value: 122, suffix: "K+", label: "LinkedIn Jobs Analyzed" },
-  { value: 8.8, suffix: "/10", label: "IIT Patna CGPA", decimals: 1 },
-  { value: 3, suffix: "", label: "Forage Simulations" },
+  { value: 7, suffix: "+", label: "Analytics Projects" },
+  { value: 6.36, suffix: "M+", label: "Transactions Analyzed", decimals: 2 },
+  { value: 124, suffix: "K+", label: "Jobs Analyzed" },
+  { value: 8213, suffix: "+", label: "Fraud Cases Detected" },
+  { value: 1.14, suffix: "T+", label: "₹ Value Analyzed", decimals: 2 },
+  { value: 0.9988, suffix: "", label: "Best ROC-AUC", decimals: 4 },
+  { value: 0.8284, suffix: "", label: "Flight Model R²", decimals: 4 },
+  { value: 3, suffix: "", label: "Industry Simulations" },
 ];
 
 export const ABOUT = {
@@ -176,8 +179,23 @@ export const PROJECTS = [
     image: "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/z4x4ocnq_executive-dashboard.png",
   },
   {
-    id: "linkalyze",
+    id: "sales-analytics",
     index: "02",
+    title: "Sales Analytics Dashboard",
+    subtitle: "Power BI · Retail Performance Intelligence",
+    business:
+      "A retail business needed clear visibility into regional sales performance and product-level profitability to guide quarterly planning.",
+    stack: ["Power BI", "DAX", "SQL", "Excel"],
+    approach:
+      "Modeled a star-schema data warehouse, authored 30+ DAX measures, and designed an executive dashboard with drill-through paths from region to SKU.",
+    result: "Delivered an executive-ready dashboard surfacing regional revenue trends, product profitability and seasonal demand patterns.",
+    github: "https://github.com/sujalgupta0008/sales-analytics-dashboard-power-bi",
+    live: "https://github.com/sujalgupta0008/sales-analytics-dashboard-power-bi",
+    image: "https://customer-assets-jt897jd0.emergentagent.net/job_sujal-minimal/artifacts/z4x4ocnq_executive-dashboard.png",
+  },
+  {
+    id: "linkalyze",
+    index: "03",
     title: "LinkaLyze",
     subtitle: "LinkedIn Job Market Analytics",
     business:
@@ -192,7 +210,7 @@ export const PROJECTS = [
   },
   {
     id: "fraud-detection",
-    index: "03",
+    index: "04",
     title: "Fraud Detection Engine",
     subtitle: "Machine Learning · Financial Risk",
     business:
@@ -207,7 +225,7 @@ export const PROJECTS = [
   },
   {
     id: "insurance-claims",
-    index: "04",
+    index: "05",
     title: "Insurance Claims Analytics",
     subtitle: "Power BI · Claims Intelligence",
     business:
@@ -222,7 +240,7 @@ export const PROJECTS = [
   },
   {
     id: "smartlend",
-    index: "05",
+    index: "06",
     title: "SmartLend",
     subtitle: "Loan Analytics Dashboard",
     business:
@@ -237,7 +255,7 @@ export const PROJECTS = [
   },
   {
     id: "ai-career-navigator",
-    index: "06",
+    index: "07",
     title: "AI Career Navigator",
     subtitle: "GenAI-Powered Career Guidance",
     business:
