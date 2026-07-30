@@ -30,6 +30,7 @@ export const HERO_STATS = [
   { value: 0.9988, suffix: "", label: "Best ROC-AUC", decimals: 4 },
   { value: 0.8284, suffix: "", label: "Flight Model R²", decimals: 4 },
   { value: 3, suffix: "", label: "Industry Simulations" },
+  { value: 22, suffix: "/100+", label: "HackDays Patna Hackathon Rank" },
 ];
 
 export const ABOUT = {
@@ -106,58 +107,58 @@ export const EXPERIENCE = [
 
 export const SKILLS = [
   {
-    category: "Data Analysis & BI",
+    category: "📊 Data Analysis & BI",
     items: [
-      "Power BI",
-      "Microsoft Excel (Advanced)",
-      "DAX",
-      "Power Query",
-      "Data Visualization",
-      "Dashboard Development"
+      "📈 Power BI",
+      "📗 Microsoft Excel (Advanced)",
+      "⚡ DAX",
+      "🔄 Power Query",
+      "🎨 Data Visualization",
+      "📊 Dashboard Development",
     ],
   },
   {
-    category: "Programming & Databases",
+    category: "💻 Programming & Databases",
     items: [
-      "Python",
-      "SQL (MySQL)",
-      "Pandas",
-      "NumPy",
-      "Matplotlib",
-      "Seaborn"
+      "🐍 Python",
+      "🗄️ SQL (MySQL)",
+      "🐼 Pandas",
+      "🔢 NumPy",
+      "📉 Matplotlib",
+      "📊 Seaborn",
     ],
   },
   {
-    category: "Machine Learning & AI",
+    category: "🤖 Machine Learning & AI",
     items: [
-      "Scikit-learn",
-      "Machine Learning",
-      "Classification",
-      "Regression",
-      "GenAI",
-      "Prompt Engineering"
+      "🧠 Scikit-learn",
+      "🤖 Machine Learning",
+      "🏷️ Classification",
+      "📈 Regression",
+      "✨ GenAI",
+      "✍️ Prompt Engineering",
     ],
   },
   {
-    category: "Analytics & Statistics",
+    category: "📐 Analytics & Statistics",
     items: [
-      "Exploratory Data Analysis (EDA)",
-      "Data Cleaning",
-      "Feature Engineering",
-      "Hypothesis Testing",
-      "Statistical Analysis",
-      "Business Insights"
+      "🔍 Exploratory Data Analysis (EDA)",
+      "🧹 Data Cleaning",
+      "⚙️ Feature Engineering",
+      "🧪 Hypothesis Testing",
+      "📊 Statistical Analysis",
+      "💡 Business Insights",
     ],
   },
   {
-    category: "Tools & Platforms",
+    category: "🛠️ Tools & Platforms",
     items: [
-      "Git",
-      "GitHub",
-      "Jupyter Notebook",
-      "VS Code",
-      "Google Colab",
-      "Azure SQL Database"
+      "🔧 Git",
+      "🐙 GitHub",
+      "📓 Jupyter Notebook",
+      "💻 VS Code",
+      "☁️ Google Colab",
+      "🗃️ Azure SQL Database",
     ],
   },
 ];
@@ -172,14 +173,14 @@ export const PROJECTS = [
     "Airfare prices fluctuate significantly based on airline, route, duration, and booking timing, making it difficult for travelers to estimate fair ticket prices and plan cost-effective trips.",
 
   stack: [
-    "Python",
-    "Scikit-Learn",
-    "Pandas",
-    "SQL",
-    "Power BI",
-    "Flask",
-    "Streamlit"
-  ],
+  "🐍 Python",
+  "🧠 Scikit-Learn",
+  "📈 Pandas",
+  "🗃️ SQL",
+  "📊 Power BI",
+  "⚡ Flask",
+  "🚀 Streamlit",
+],
 
   approach:
     "Built an end-to-end machine learning pipeline by performing data cleaning, feature engineering, and exploratory data analysis on flight booking data. Trained and evaluated multiple regression models, selecting Random Forest as the best-performing model (R² = 0.8284). Developed an interactive Power BI dashboard for price trend analysis and deployed the prediction system as a web application using Flask/Streamlit.",
@@ -200,7 +201,12 @@ export const PROJECTS = [
     subtitle: "Power BI · Retail Performance Intelligence",
     business:
       "A retail business needed clear visibility into regional sales performance and product-level profitability to guide quarterly planning.",
-    stack: ["Power BI", "DAX", "SQL", "Excel"],
+    stack: [
+  "📈 Power BI",
+  "⚡ DAX",
+  "🔍 SQL",
+  "📊 Excel",
+],
     approach:
       "Modeled a star-schema data warehouse, authored 30+ DAX measures, and designed an executive dashboard with drill-through paths from region to SKU.",
     result: "Delivered an executive-ready dashboard surfacing regional revenue trends, product profitability and seasonal demand patterns.",
@@ -215,7 +221,12 @@ export const PROJECTS = [
     subtitle: "LinkedIn Job Market Analytics",
     business:
       "Job seekers and career switchers lack real-time visibility into in-demand skills and market trends across the analytics job market.",
-    stack: ["Python", "Web Scraping", "NLP", "Power BI"],
+    stack: [
+  "🐍 Python",
+  "🔎 Web Scraping",
+  "🤖 NLP",
+  "📈 Power BI",
+],
     approach:
       "Scraped and cleaned 122K+ LinkedIn job listings, extracted in-demand skills using NLP, and built an interactive dashboard to explore role clusters and skill frequency.",
     result: "Mapped the most in-demand skills and role clusters across 122,000+ live job listings.",
@@ -230,7 +241,12 @@ export const PROJECTS = [
     subtitle: "Machine Learning · Financial Risk",
     business:
       "Financial institutions need to flag fraudulent transactions in near real-time while keeping false positives low.",
-    stack: ["Python", "Scikit-learn", "XGBoost", "SMOTE"],
+    stack: [
+  "🐍 Python",
+  "🧠 Scikit-learn",
+  "🌲 XGBoost",
+  "📊 SMOTE",
+],
     approach:
       "Processed 6.36M+ transaction records, handled severe class imbalance, engineered risk features and benchmarked multiple classifiers on ROC-AUC.",
     result: "Built a high-recall fraud classifier validated across 6.36M+ transaction records.",
@@ -245,7 +261,11 @@ export const PROJECTS = [
     subtitle: "Power BI · Claims Intelligence",
     business:
       "An insurance provider needed to identify claim bottlenecks and high-risk segments to speed up settlements.",
-    stack: ["Power BI", "SQL", "DAX"],
+    stack: [
+  "📈 Power BI",
+  "🔍 SQL",
+  "🧮 DAX",
+],
     approach:
       "Modeled a claims data warehouse and built a KPI dashboard tracking claim ratio, turnaround time and loss ratio by segment.",
     result: "Highlighted high-risk claim segments and turnaround-time bottlenecks for faster settlements.",
@@ -260,7 +280,12 @@ export const PROJECTS = [
     subtitle: "Loan Analytics Dashboard",
     business:
       "A lending team needed a risk-segmented view of loan applicants to reduce default exposure.",
-    stack: ["SQL", "Power BI", "Python", "Logistic Regression"],
+    stack: [
+  "🔍 SQL",
+  "📈 Power BI",
+  "🐍 Python",
+  "🤖 Logistic Regression",
+],
     approach:
       "Built a risk-scoring model and a portfolio dashboard segmenting borrowers by predicted default risk.",
     result: "Segmented the loan portfolio by default risk to support smarter lending decisions.",
@@ -275,7 +300,12 @@ export const PROJECTS = [
     subtitle: "GenAI-Powered Career Guidance",
     business:
       "Students and early-career professionals need personalized, data-backed guidance on career paths in tech and analytics.",
-    stack: ["Python", "GenAI / LLMs", "Prompt Engineering", "Streamlit"],
+    stack: [
+  "🐍 Python",
+  "🤖 GenAI / LLMs",
+  "✍️ Prompt Engineering",
+  "🚀 Streamlit",
+],
     approach:
       "Built an AI assistant that maps a user's skills and interests to career paths and a personalized learning roadmap.",
     result: "Delivers personalized, GenAI-reasoned career-path recommendations in seconds.",
@@ -294,11 +324,42 @@ export const CERTIFICATIONS = [
 ];
 
 export const ACHIEVEMENTS = [
-  { value: "8.8", suffix: "/10", label: "CGPA at graduation", year: "2025" },
-  { value: "7", suffix: "+", label: "End-to-end analytics projects shipped", year: "2023–25" },
-  { value: "6.36", suffix: "M+", label: "Records processed across ML pipelines", year: "2024" },
-  { value: "122", suffix: "K+", label: "Job listings mined for LinkaLyze", year: "2024" },
-  { value: "3", suffix: "+", label: "Corporate simulations completed", year: "2024–25" },
+  {
+    value: "8.8",
+    suffix: "/10",
+    label: "🎓 CGPA at IIT Patna",
+    year: "Current",
+  },
+  {
+    value: "4",
+    suffix: "★",
+    label: "🐍 HackerRank Python",
+    year: "2026",
+  },
+  {
+    value: "22",
+    suffix: "/100+",
+    label: "🏆 HackDays Patna Rank",
+    year: "2026",
+  },
+  {
+    value: "122",
+    suffix: "K+",
+    label: "📊 LinkedIn Jobs Analyzed",
+    year: "2026",
+  },
+  {
+    value: "6.36",
+    suffix: "M+",
+    label: "⚡ Rows Processed",
+    year: "2026",
+  },
+  {
+    value: "4",
+    suffix: "+",
+    label: "💼 Industry Simulations",
+    year: "2026",
+  },
 ];
 
 export const WORKFLOW_STEPS = [
