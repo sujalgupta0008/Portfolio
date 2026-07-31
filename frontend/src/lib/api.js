@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 
 export const submitContact = async (form) => {
   return emailjs.send(
-    'service_qmay8y3',
+    'service_33x4dyd',
     'template_u76kva4',
     {
       from_name: form.name,
