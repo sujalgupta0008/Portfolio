@@ -59,7 +59,7 @@ export const EDUCATION = [
   id: "aktu",
   institution: "Dr. A.P.J. Abdul Kalam Technical University (AKTU)",
   program: "Bachelor of Technology (B.Tech) in Computer Science and Engineering",
-  period: "Sep 2024 – Sep 2028",
+  period: "July 2024 – July 2028",
   detail:
     "Studying core Computer Science subjects including Data Structures & Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, Computer Networks, and Software Engineering.",
   highlight: "CGPA: 7.7/10",
@@ -310,7 +310,7 @@ export const PROJECTS = [
       "Built an AI assistant that maps a user's skills and interests to career paths and a personalized learning roadmap.",
     result: "Delivers personalized, GenAI-reasoned career-path recommendations in seconds.",
     github: "https://github.com/sujalgupta0008/AI-Career-Navigator",
-    live: "https://github.com/sujalgupta0008/AI-Career-Navigator",
+    live: "https://ai-career-navigator-by-sujal.streamlit.app/",
     image: "https://images.unsplash.com/photo-1750969185331-e03829f72c7d?crop=entropy&cs=srgb&fm=jpg&q=85",
   },
 ];
