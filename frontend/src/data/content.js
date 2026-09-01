@@ -34,6 +34,7 @@ export const HERO_STATS =[
   { value: 22, suffix: "/100+", label: "HackDays Patna Hackathon Rank" },
 ];
 
+
 export const ABOUT = {
   kicker: "01 — About",
   quote: "Data is valuable only when it drives better decisions.",
