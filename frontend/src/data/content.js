@@ -68,7 +68,7 @@ export const EDUCATION = [
 },
 ];
 
-export const VIRTUAL_EXPERIENCE = [
+export const EXPERIENCE = [
   {
     id: "tata-genai",
     company: "Tata GenAI",
