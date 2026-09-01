@@ -1,6 +1,6 @@
 export const SOCIALS = {
   github: "https://github.com/sujalgupta0008",
-  linkedin: "https://www.linkedin.com/in/sujal90585",
+  linkedin: "https://www.linkedin.com/in/sujalgupta008",
   email: "mailto:sujalgupta0008@gmail.com",
 };
 
@@ -21,8 +21,9 @@ export const ROLES = [
   "GenAI Explorer"
 ];
 
-export const HERO_STATS = [
-  { value: 7, suffix: "+", label: "Analytics Projects" },
+export const HERO_STATS =[
+  { value: 8, suffix: "+", label: "Analytics & Data Projects" },
+  { value: 1, suffix: "", label: "Open Data Copilot (AI Workspace)" },
   { value: 6.36, suffix: "M+", label: "Transactions Analyzed", decimals: 2 },
   { value: 124, suffix: "K+", label: "Jobs Analyzed" },
   { value: 8213, suffix: "+", label: "Fraud Cases Detected" },
@@ -66,7 +67,7 @@ export const EDUCATION = [
 },
 ];
 
-export const EXPERIENCE = [
+export const VIRTUAL EXPERIENCE = [
   {
     id: "tata-genai",
     company: "Tata GenAI",
@@ -165,8 +166,39 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-  id: "flight-price-prediction",
+  id: "open-data-copilot",
   index: "01",
+  title: "Open Data Copilot",
+  subtitle: "Full-Stack AI · Data Intelligence Workspace",
+  business:
+    "Data analysts and teams waste significant time on repetitive data cleaning, preparation, and complex integration setups, creating bottlenecks in turning raw datasets into actionable business intelligence.",
+
+  stack: [
+    "🐍 Python",
+    "⚡ FastAPI",
+    "⚛️ React",
+    "📘 TypeScript",
+    "🐘 PostgreSQL",
+    "🔑 Google OAuth 2.0",
+    "☁️ Render",
+    "▲ Vercel",
+  ],
+
+  approach:
+    "Engineered a production-grade data intelligence workspace featuring an asynchronous FastAPI backend deployed on Render and a responsive React (TypeScript) SPA frontend hosted on Vercel. Integrated PostgreSQL (Neon DB) for dynamic cloud storage alongside custom Google Drive (BYOS) integration via OAuth 2.0. Implemented secure JWT session management and SPA rewrite handlers to ensure zero-downtime client-side routing and automated data prep workflows.",
+
+  result:
+    "Delivered an automated, human-in-the-loop AI workspace that streamlines data preparation while retaining full analytical control. Successfully published with 100% compliant OAuth authentication, resilient 24/7 server keep-alive automation, and seamless workspace session management.",
+
+  github: "https://github.com/sujalgupta0008/Open-Data-Copilot",
+
+  live: "https://open-data-copilot.vercel.app/",
+
+  image: "/homepage.png",
+},
+  {
+  id: "flight-price-prediction",
+  index: "02",
   title: "Flight Price Prediction System",
   subtitle: "Machine Learning · Travel Price Intelligence",
   business:
@@ -196,7 +228,7 @@ export const PROJECTS = [
 },
   {
     id: "sales-analytics",
-    index: "02",
+    index: "03",
     title: "Sales Analytics Dashboard",
     subtitle: "Power BI · Retail Performance Intelligence",
     business:
@@ -216,7 +248,7 @@ export const PROJECTS = [
   },
   {
     id: "linkalyze",
-    index: "03",
+    index: "04",
     title: "LinkaLyze",
     subtitle: "LinkedIn Job Market Analytics",
     business:
@@ -236,7 +268,7 @@ export const PROJECTS = [
   },
   {
     id: "fraud-detection",
-    index: "04",
+    index: "05",
     title: "Fraud Detection Engine",
     subtitle: "Machine Learning · Financial Risk",
     business:
@@ -256,7 +288,7 @@ export const PROJECTS = [
   },
   {
     id: "insurance-claims",
-    index: "05",
+    index: "06",
     title: "Insurance Claims Analytics",
     subtitle: "Power BI · Claims Intelligence",
     business:
@@ -275,7 +307,7 @@ export const PROJECTS = [
   },
   {
     id: "smartlend",
-    index: "06",
+    index: "07",
     title: "SmartLend",
     subtitle: "Loan Analytics Dashboard",
     business:
@@ -295,7 +327,7 @@ export const PROJECTS = [
   },
   {
     id: "ai-career-navigator",
-    index: "07",
+    index: "08",
     title: "AI Career Navigator",
     subtitle: "GenAI-Powered Career Guidance",
     business:
